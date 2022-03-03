@@ -24,7 +24,7 @@ common_movies = df[~df["title"].isin(rare_movies)]
 
 common_movies.shape
 common_movies["title"].nunique()
-# transforming table to the matric to calculate item based
+# transforming table to the matrix to calculate item based
 user_movie_df = common_movies.pivot_table(index=["userId"], columns=["title"], values="rating")
 
 user_movie_df.shape
